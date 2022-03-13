@@ -21,7 +21,7 @@ $--color-primary: teal;
 /* Ubicación de la fuente, obligatoria */
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
-@import "~element-ui/packages/theme-chalk/src/index";
+@import "~element-ui/packages/theme-chalk/index";
 ```
 
 Entonces, en el archivo principal del proyecto, importe este archivo de estilos en lugar de los estilos de Element:

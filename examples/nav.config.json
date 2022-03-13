@@ -311,6 +311,15 @@
           ]
         }
       ]
+    },
+    {
+      "groupName": "LbxUI",
+      "list": [
+        {
+          "path": "/lbx-icon",
+          "title": "icon 图标"
+        }
+      ]
     }
   ],
   "en-US": [

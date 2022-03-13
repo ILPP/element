@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('./fonts/iconfont.woff') format('woff'), url('./fonts/iconfont.ttf') format('truetype');
+    font-weight: normal;
+    font-display: auto;
+    font-style: normal;
+  }
+  
+  [class^="lbx-icon-"], [class*=" lbx-icon-"] {
+    font-family: 'iconfont' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: baseline;
+    display: inline-block;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+  }
+  
+  /**
+   * 示例：
+   * .lbx-icon-iconName:before {
+   *   content: "\unicode 16进制码" 
+   * }
+   * .lbx-icon-add:before {
+   *   content: "\e606"
+   * }
+   */
+  

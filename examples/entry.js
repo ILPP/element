@@ -11,11 +11,16 @@ import SideNav from './components/side-nav';
 import FooterNav from './components/footer-nav';
 import title from './i18n/title';
 
-import 'packages/theme-chalk/src/index.scss';
+// import 'packages/theme-chalk/src/index.scss';
+import 'packages/theme-chalk/index.css';
+// 引入自定义样式
+import 'packages/theme-lbx/src/index.scss';
 import './demo-styles/index.scss';
 import './assets/styles/common.css';
 import './assets/styles/fonts/style.css';
 import icon from './icon.json';
+import lbxIcon from './lbx-icon.json';
+Vue.prototype.$lbxIcon = lbxIcon; // StsIcon 列表页用
 
 Vue.use(Element);
 Vue.use(VueRouter);

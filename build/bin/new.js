@@ -13,9 +13,13 @@ if (!process.argv[2]) {
 const path = require('path');
 const fs = require('fs');
 const fileSave = require('file-save');
+// 连字符转大驼峰
 const uppercamelcase = require('uppercamelcase');
+// 获取组件名
 const componentname = process.argv[2];
+// 组件中文名
 const chineseName = process.argv[3] || componentname;
+// 连字符转大驼峰
 const ComponentName = uppercamelcase(componentname);
 const PackagePath = path.resolve(__dirname, '../../packages', componentname);
 const Files = [
@@ -77,14 +81,6 @@ describe('${ComponentName}', () => {
 `
   },
   {
-    filename: path.join('../../packages/theme-chalk/src', `${componentname}.scss`),
-    content: `@import "mixins/mixins";
-@import "common/var";
-
-@include b(${componentname}) {
-}`
-  },
-  {
     filename: path.join('../../types', `${componentname}.d.ts`),
     content: `import { ElementUIComponent } from './component'
 
@@ -103,13 +99,6 @@ if (componentsFile[componentname]) {
 componentsFile[componentname] = `./packages/${componentname}/index.js`;
 fileSave(path.join(__dirname, '../../components.json'))
   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
-  .end('\n');
-
-// 添加到 index.scss
-const sassPath = path.join(__dirname, '../../packages/theme-chalk/src/index.scss');
-const sassImportText = `${fs.readFileSync(sassPath)}@import "./${componentname}.scss";`;
-fileSave(sassPath)
-  .write(sassImportText, 'utf8')
   .end('\n');
 
 // 添加到 element-ui.d.ts

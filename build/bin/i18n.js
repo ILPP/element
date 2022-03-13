@@ -1,7 +1,8 @@
 'use strict';
-
+// 根据page.json 生成文档的翻译文件.vue
 var fs = require('fs');
 var path = require('path');
+// 读取i18n配置
 var langConfig = require('../../examples/i18n/page.json');
 
 langConfig.forEach(lang => {
