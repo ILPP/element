@@ -95,10 +95,10 @@ describe('${ComponentName}', () => {
   // 组件类型声明文件
   {
     filename: path.join('../../types', `${componentname}.d.ts`),
-    content: `import { LbxUIComponent } from './component'
+    content: `import { ElementUIComponent } from './component'
 
 /** ${ComponentName} Component */
-export declare class Lbx${ComponentName} extends LbxUIComponent {
+export declare class Lbx${ComponentName} extends ElementUIComponent {
 }`
   }
 ];
