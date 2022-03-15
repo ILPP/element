@@ -16,8 +16,8 @@
 
 :::demo
 ```html
-<i class="lbx-icon-add"></i>
-<el-button type="primary" icon="lbx-icon-add">搜索</el-button>
+<i class="lbx-icon-hetong"></i>
+<el-button type="primary" icon="lbx-icon-hetong">搜索</el-button>
 
 ```
 :::
